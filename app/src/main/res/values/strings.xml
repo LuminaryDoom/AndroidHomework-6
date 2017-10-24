@@ -16,4 +16,6 @@
     <string name="_addition">+</string>
     <string name="_equals">=</string>
     <string name="c">C</string>
+    <string name="_x">x</string>
+    <string name="_subtraction">-</string>
 </resources>
