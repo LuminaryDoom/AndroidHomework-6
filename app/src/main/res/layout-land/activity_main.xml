@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nyc.c4q.sciencecalculator.MainActivity">
+
+    <TextView
+        android:id="@+id/math_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#000">
+    </TextView>
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="#000"
+        android:backgroundTint="#000"
+        android:columnCount="4"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_7"
+            android:text="@string/num_7"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_8"
+            android:text="@string/num_8"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_9"
+            android:text="@string/num_9"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_division"
+            android:text="@string/_division"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_4"
+            android:text="@string/num_4"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_5"
+            android:text="@string/num_5"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_6"
+            android:text="@string/num_6"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_multiplication"
+            android:text="x"
+            android:onClick ="getText"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_1"
+            android:text="@string/num_1"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_2"
+            android:text="@string/num_2"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_3"
+            android:text="@string/num_3"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_subtraction"
+            android:text="-"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_decimal_point"
+            android:text="@string/_decimal_point"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_0"
+            android:text="@string/num_0"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_addition"
+            android:text="@string/_plus"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_equals"
+            android:text="@string/_equals"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/button_clear"
+            android:text="@string/c"
+            android:textSize="@dimen/button_text_size" />
+    </GridLayout>
+
+
+</LinearLayout>
