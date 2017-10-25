@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
      * Horizontal Buttons
      */
     Button factorial;
-
     Button inverse;
     Button sine;
     Button inverseSine;
@@ -49,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
     Button inverseCosine;
     Button tan;
     Button inverseTan;
-
     Button naturalLog;
     Button logarithim;
     Button pi;
