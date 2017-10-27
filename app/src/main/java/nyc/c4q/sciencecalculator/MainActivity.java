@@ -2,6 +2,7 @@ package nyc.c4q.sciencecalculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.fathzer.soft.javaluator.DoubleEvaluator;
@@ -12,7 +13,8 @@ import android.content.*;
 import nyc.c4q.scientificcalculator.R;
 
 public class MainActivity extends AppCompatActivity {
-    TextView displayText;
+
+        TextView displayText;
     /**
      * Vertical Buttons
      */
@@ -67,15 +69,46 @@ public class MainActivity extends AppCompatActivity {
     Button square;
     Button xRoot;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //  TextView txt1 = (TextView) findViewById(R.id.math_view);
-        DoubleEvaluator eval = new DoubleEvaluator();
-        String calculate = "(2^3-1)*sin(pi/4)/ln(pi^2)";
-        Double result = eval.evaluate(calculate);
-        //  txt1.setText(result.toString());
+        allClear = (Button) findViewById(R.id.button_allclear);
+        allClear.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                displayText = (TextView) findViewById(R.id.math_view);
+                    storeString.mathText = "";
+                displayText.setText(storeString.mathText);
+                return true;
+            }
+        });
+
     }
+
+    public void getText(View v)
+    {
+        displayText = (TextView) findViewById(R.id.math_view);
+        Button b = (Button) v;
+        storeString.mathText += b.getText().toString();
+        displayText.setText(storeString.mathText);
+    }
+
+    public void delete(View v)
+   {
+        displayText = (TextView) findViewById(R.id.math_view);
+       try {
+
+           try {
+               storeString.mathText = storeString.mathText.substring(0, storeString.mathText.length() - 1);
+           }catch (NullPointerException e){}
+
+       } catch (StringIndexOutOfBoundsException e) {
+           storeString.mathText ="";
+           displayText.setText(storeString.mathText);
+       }
+
+        displayText.setText(storeString.mathText);
+    }
+
 }
