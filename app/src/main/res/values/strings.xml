@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">ScientificCalculator</string>
+
+    <string name="num_0">0</string>
+    <string name="num_1">1</string>
+    <string name="num_2">2</string>
+    <string name="num_3">3</string>
+    <string name="num_4">4</string>
+    <string name="num_5">5</string>
+    <string name="num_6">6</string>
+    <string name="num_7">7</string>
+    <string name="num_8">8</string>
+    <string name="num_9">9</string>
+
+    <string name="_division">/</string>
+    <string name="_multiplication">x</string>
+    <string name="_decimal_point">.</string>
+    <string name="_plus">+</string>
+    <string name="_equals">=</string>
+    <string name="_delete">DEL</string>
+    <string name="_minus">-</string>
+    <string name="l_bracket">(</string>
+    <string name="r_bracket">)</string>
+    <string name="modulo">%</string>
+    <string name="division">÷</string>
+
+    <string name="_sine">sin</string>
+    <string name="_cosine">cos</string>
+    <string name="_tan">tan</string>
+    <string name="_invsin">asin</string>
+    <string name="_invcos">acos</string>
+    <string name="_invtan">atan</string>
+    <string name="_natural_log">ln</string>
+    <string name="_log">log</string>
+    <string name="_Exp">E</string>
+    <string name ="_euland">e</string>
+    <string name ="_power">^</string>
+    <string name ="_baseLogPow">e^</string>
+    <string name ="base_ten">10^</string>
+    <string name ="_root_x">root</string>
+    <string name = "_pi">u\03A0</string>
+    <string name="_radian">rad</string>
+    <string name="_degree">deg</string>
+    <string name="_factorial">!</string>
+
+
+</resources>
