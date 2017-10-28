@@ -3,28 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mylayout"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="nyc.c4q.scientificcalculator.MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/math_view"
+        android:layout_width="fill_parent"
         android:layout_height="150dp"
-        android:background="#000">
-    </TextView>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="#000"
-        android:textSize="35sp" />
+        android:background="#ffffff"
+        android:textSize="48sp"></TextView>
 
 
     <GridLayout
+        android:id="@+id/gl1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#000"
+        android:background="#00ff00"
         android:layout_gravity="bottom"
         android:columnCount="4"
         android:orientation="horizontal"
@@ -61,12 +58,13 @@
             android:textSize="@dimen/button_text_size"/>
         <Button
             android:id="@+id/button_multiplication"
-            android:text="x"
+            android:text="*"
             android:textSize="@dimen/button_text_size"/>
         <Button
             android:id="@+id/button_1"
             android:text="@string/_1"
-            android:textSize="@dimen/button_text_size"/>
+            android:textSize="@dimen/button_text_size"
+            android:layout_width="wrap_content" />
         <Button
             android:id="@+id/button_2"
             android:text="@string/_2"
@@ -99,6 +97,56 @@
             android:id="@+id/button_clear"
             android:text="@string/c"
             android:textSize="@dimen/button_text_size"/>
+        <Button
+            android:id="@+id/cos_button"
+            android:text="cos"
+            android:textSize="24sp"
+            />
+        <Button
+            android:id="@+id/sin_button"
+            android:text="sin"
+            android:textSize="24sp"
+
+            />
+        <Button
+            android:id="@+id/tangent"
+            android:text="Tan"
+            android:textSize="24sp"/>
+        <Button
+            android:id="@+id/open_par"
+            android:text="("
+            android:textSize="24sp"/>
+        <Button
+            android:id="@+id/close_par"
+            android:text=")"
+            android:textSize="24dp"/>
+        <Button
+            android:id="@+id/power"
+            android:text="^"
+            android:textSize="24dp"
+
+/>
+        <Button
+            android:id="@+id/incos"
+            android:text="acos"
+            android:textSize="24dp"/>
+        <Button
+            android:id="@+id/insin"
+            android:text="asin"
+            android:textSize="24dp"/>
+        <Button
+            android:id="@+id/intan"
+            android:text="atan"
+            android:textSize="24dp"/>
+        <Button
+            android:id="@+id/root"
+            android:text="sqrt"
+            android:textSize="24dp"
+            />
+        <Button
+            android:id="@+id/allclear"
+            android:text="AC"
+            android:textSize="24dp"/>
     </GridLayout>
 
 
