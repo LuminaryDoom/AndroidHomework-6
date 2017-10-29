@@ -123,6 +123,7 @@
             android:id="@+id/button_9"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:onClick="getText"    
             android:text="9"
             android:textSize="@dimen/button_text_size" />
 
