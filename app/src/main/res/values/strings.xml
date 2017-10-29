@@ -24,12 +24,12 @@
     <string name="modulo">%</string>
     <string name="division">÷</string>
 
-    <string name="_sine">sin</string>
-    <string name="_cosine">cos</string>
-    <string name="_tan">tan</string>
-    <string name="_invsin">asin</string>
-    <string name="_invcos">acos</string>
-    <string name="_invtan">atan</string>
+    <string name="_sine">sin(</string>
+    <string name="_cosine">cos(</string>
+    <string name="_tan">tan(</string>
+    <string name="_invsin">asin(</string>
+    <string name="_invcos">acos(</string>
+    <string name="_invtan">atan(</string>
     <string name="_natural_log">ln</string>
     <string name="_log">log</string>
     <string name="_Exp">E</string>
@@ -37,10 +37,10 @@
     <string name ="_power">^</string>
     <string name ="_baseLogPow">e^</string>
     <string name ="base_ten">10^</string>
-    <string name ="_root_x">root</string>
+    <string name ="_root_x">root(</string>
     <string name = "_pi">u\03A0</string>
-    <string name="_radian">rad</string>
-    <string name="_degree">deg</string>
+    <string name="_radian">[rad]*</string>
+    <string name="_degree">*[deg]</string>
     <string name="_factorial">!</string>
 
 
