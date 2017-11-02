@@ -5,64 +5,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
 import org.mariuszgromada.math.mxparser.*;
+
 
 public class MainActivity extends AppCompatActivity {
 
     TextView displayText;
-    /**
-     * Vertical Buttons
-     */
-    Button leftParentheses;
-    Button rightParentheses;
-    Button percent;
-    Button decimalPoint;
 
-    Button allClear;
-    Button clearEntry;
+    Button allClear; //delete
 
-    Button numberOne;
-    Button numberTwo;
-    Button numberThree;
-    Button numberFour;
-    Button numberFive;
-    Button numberSix;
-    Button numberSeven;
-    Button numberEight;
-    Button numberNine;
-    Button numberZero;
-
-    Button divide;
-    Button multiply;
-    Button subtract;
-    Button plus;
-    Button equals;
-
-    /**
-     * Horizontal Buttons
-     */
-    Button factorial;
-
-    Button inverse;
-    Button sine;
-    Button inverseSine;
-    Button cosine;
-    Button inverseCosine;
-    Button tan;
-    Button inverseTan;
-
-    Button naturalLog;
-    Button logarithim;
-    Button pi;
-    Button eulersNumber;
-    Button eulersNumberPowerX;
-    Button squareRoot;
-    Button exponential;
-    Button power;
-    Button rnd;
-    Button tenPowerX;
-    Button square;
-    Button xRoot;
 
 
     @Override
@@ -81,29 +33,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Expression e1 =new Expression("5!");
-        double answer = e1.calculate();
-        displayText = (TextView) findViewById(R.id.math_view);
-        displayText.setText(Double.toString(answer));
-
-
-        divide = (Button) findViewById(R.id.button_division);
-        divide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                storeString.mathText += "/";
-                displayText.setText(storeString.mathText);
-            }
-        });
-
-        inverse = (Button) findViewById(R.id.button_inverse);
-        inverse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sine = (Button) findViewById(R.id.button_sin);
-                sine.setText("asin");
-            }
-        });
     }
 
     public void getText(View v)
@@ -128,6 +57,56 @@ public class MainActivity extends AppCompatActivity {
             displayText.setText(storeString.mathText);
         }
 
+        displayText.setText(storeString.mathText);
+    }
+
+    public void Inverse(View v)
+    {
+        Button sin = (Button) findViewById(R.id.button_sin);
+        Button cos = (Button) findViewById(R.id.button_cos);
+        Button tan = (Button) findViewById(R.id.button_tan);
+        Button naturalLog = (Button) findViewById(R.id.button_natural_log);
+        Button log = (Button) findViewById(R.id.button_log);
+        Button sqrt = (Button) findViewById(R.id.button_sqrt_root);
+        Button power = (Button) findViewById(R.id.button_power);
+        Button decimal = (Button) findViewById(R.id.button_decimal_point);
+
+        if( storeString.counter % 2 == 0) {
+            sin.setText("asin");
+            cos.setText("acos");
+            tan.setText("atan");
+            naturalLog.setText("e^");
+            log.setText("10^");
+            sqrt.setText("^2");
+            power.setText("root");
+            decimal.setText(",");
+            storeString.counter++;
+        }else{
+            sin.setText("sin");
+            cos.setText("cos");
+            tan.setText("tan");
+            naturalLog.setText("ln");
+            log.setText("log");
+            sqrt.setText("sqrt");
+            power.setText("^");
+            decimal.setText(".");
+            storeString.counter++;
+        }
+
+    }
+
+    public void Answer(View v){
+        displayText = (TextView) findViewById(R.id.math_view);
+        storeString.mathText += storeString.answerText;
+        displayText.setText(storeString.mathText);
+    }
+
+    public void calculate(View v){
+        displayText = (TextView) findViewById(R.id.math_view);
+        Expression e1 =new Expression(storeString.mathText);
+        double answer = e1.calculate();
+        storeString.mathText = Double.toString(answer);
+        storeString.answerText = Double.toString(answer);
         displayText.setText(storeString.mathText);
     }
 

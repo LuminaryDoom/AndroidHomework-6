@@ -33,6 +33,7 @@
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:id="@+id/button_rad"
+            android:onClick="getText"
             android:text="@string/_radian"
             android:textSize="20sp"
             />
@@ -40,6 +41,7 @@
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:id="@+id/button_deg"
+            android:onClick="getText"
             android:text="@string/_degree"
             android:textSize="@dimen/button_text_size" />
         <Button
@@ -47,6 +49,7 @@
             android:layout_width="wrap_content"
             android:id="@+id/button_factorial"
             android:text="@string/_factorial"
+            android:onClick="getText"
             android:textSize="@dimen/button_text_size"/>
         <Button
             android:layout_height="match_parent"
@@ -66,7 +69,7 @@
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:id="@+id/button_percent"
-            android:text="@string/num_5"
+            android:text="@string/modulo"
             android:onClick="getText"
             android:textSize="@dimen/button_text_size"/>
         <Button
@@ -82,12 +85,12 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/land_row_size"
         android:layout_below="@+id/first_row"
-        android:layout_alignParentStart="true"
         android:id="@+id/second_row">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/button_inverse"
+            android:onClick="Inverse"
             android:text="Inv"
             android:textSize="@dimen/button_text_size"/>
         <Button
@@ -131,7 +134,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/button_division"
-            android:text="\u00F7"
+            android:text="/"
             android:textSize="@dimen/button_text_size"/>
     </LinearLayout>
 
@@ -147,6 +150,7 @@
             android:id="@+id/button_pi"
             android:text="pi"
             android:onClick="getText"
+            android:textAllCaps="false"
             android:textSize="@dimen/button_text_size"/>
         <Button
             android:layout_width="wrap_content"
@@ -190,6 +194,7 @@
             android:layout_height="match_parent"
             android:id="@+id/button_multiply"
             android:text="x"
+            android:textAllCaps="false"
             android:textSize="@dimen/button_text_size"/>
     </LinearLayout>
 
@@ -205,6 +210,7 @@
             android:id="@+id/button_euland"
             android:onClick="getText"
             android:text="e"
+            android:textAllCaps="false"
             android:textSize="@dimen/button_text_size"/>
         <Button
             android:layout_width="wrap_content"
@@ -214,10 +220,11 @@
             android:text="tan"
             android:textSize="@dimen/button_text_size"/>
         <Button
-            android:id="@+id/button_root"
+            android:id="@+id/button_sqrt_root"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="\u221A"
+            android:text="sqrt"
+            android:onClick="getText"
             android:textSize="@dimen/button_text_size" />
         <Button
             android:layout_width="wrap_content"
@@ -262,20 +269,21 @@
             android:layout_height="match_parent"
             android:id="@+id/button_answer"
             android:text="Ans"
-            android:onClick="lastAnswer"
+            android:onClick="Answer"
             android:textSize="@dimen/button_text_size"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/button_exponential_form"
-            android:onClick="scientificNotation"
-            android:text="EXP"
+            android:onClick="getText"
+            android:text="E"
             android:textSize="@dimen/button_text_size"/>
         <Button
             android:id="@+id/button_power"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="x\u207F"
+            android:text="^"
+            android:onClick="getText"
             android:textSize="@dimen/button_text_size" />
         <Button
             android:layout_width="wrap_content"
@@ -296,7 +304,7 @@
             android:id="@+id/button_equals"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:onClick="result"
+            android:onClick="calculate"
             android:text="="
             android:textSize="@dimen/button_text_size" />
 

@@ -6,4 +6,6 @@ package nyc.c4q.scientificcalculator;
 
 public class storeString {
     public static String mathText ="";
+    public static String answerText="";
+    public static int counter;
 }
